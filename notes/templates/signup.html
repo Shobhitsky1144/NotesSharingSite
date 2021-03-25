@@ -1,0 +1,59 @@
+{% extends 'nav.html' %}
+ {% load static %}
+ {% block body %}
+ <div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2 class="text-center">EXISTING CUSTOMERS</h2>
+      <hr>
+      <p>By Creating an Account with our website , u will be able to move through the notes upload and
+      downloading process and more ...</p>
+      <center><a href="{% url 'login' %}" class="btn btn-danger text-white mt-5"> USER LOGIN</a></center>
+    </div>
+    <div class="col-sm-6">
+      <h2 class="text-center">REGISTER US</h2>
+      <hr>
+      <p>if you have not an account with us , please signup ....</p>
+      <form method="post">{% csrf_token %}
+      <label>FirstName</label>
+          <input type="text" class="form-control" name="firstname" placeholder="Enter FirstName">
+      <label>LastName</label>
+          <input type="text" class="form-control" name="lastname" placeholder="Enter LastName">
+      <label>Contact</label>
+          <input type="text" class="form-control" name="contact" placeholder="Enter Contact Number">
+      <label>Email Id</label>
+          <input type="email" class="form-control" name="emailid" placeholder="Enter Your Email ID">
+      <label>Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Enter Password">
+      <label>Branch</label>
+      <select class="form-control" name="branch">
+        <option value="Computer Science">Computer Science</option>>
+        <option value="Mechanical">Mechanical</option>
+        <option value="Civil">Civil</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Electronics">Electronics</option>
+      </select>
+      <label>Are You?</label>
+      <select class="form-control" name="role">
+        <option value="Student">Student</option>>
+        <option value="Teacher">Teacher</option>
+
+      </select>
+          <button type="submit" class="btn btn-danger mt-2" name="button">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+ </div>
+ {% ifequal error "no" %}
+ <script>
+   alert('Signup Sucssfully');
+   window.location=('{% url 'login' %}');
+ </script>
+ {% endifequal %}
+ {% ifequal error "yes" %}
+ <script>
+   alert('Something went wrong , Try Again');
+
+ </script>
+ {% endifequal %}
+ {% endblock body %}

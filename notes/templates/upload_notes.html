@@ -1,0 +1,63 @@
+{% extends 'usernav.html' %}
+ {% load static %}
+ {% block body %}
+ <div class="container mt-5">
+   <h2 class="text-center">UPLOAD NOTES</h2>
+   <hr>
+  <div class="row">
+
+    <div class="col-sm-6">
+
+
+      <form method="post" enctype="multipart/form-data">{% csrf_token %}
+      <label>Branch</label>
+        <select class="form-control" name="branch" >
+          <option value="">---Select Branch---</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Mechanical">Mechanical</option>
+          <option value="Civil">Civil</option>
+          <option value="Electrical">Electrical</option>
+          <option value="Electronics">Electronics</option>
+        </select>
+      <label>Subject</label>
+          <input type="text" class="form-control" name="subject" placeholder="Enter Subject">
+      <label>Notes File</label>
+          <input type="file" class="form-control" name="notesfile" >
+      <label>File Type</label>
+      <select class="form-control" name="filetype" >
+        <option value="">---Select File Type---</option>
+        <option value="PDF">PDF</option>
+        <option value="PPT">PPT</option>
+        <option value="DOC/DOCX">DOC/DOCX</option>
+        <option value="TXT">TXT</option>
+        <option value="Image">Image</option>
+        <option value="ZIP/RAR">ZIP/RAR</option>
+      </select>
+
+      <label>Description</label>
+      <textarea class="form-control" name="description">
+
+      </textarea>
+          <button type="submit" class="btn btn-danger mt-2" name="button">SUBMIT</button>
+      </form>
+    </div>
+    <div class="col-sm-6">
+
+      <img src="{% static 'images/upload_notes.jpg' %}" style="width:114%;height:400px;"class="mt-2" >
+
+    </div>
+  </div>
+ </div>
+ {% ifequal error "no" %}
+ <script>
+   alert('Notes Uploaded Sucssfully');
+
+ </script>
+ {% endifequal %}
+ {% ifequal error "yes" %}
+ <script>
+   alert('Something went wrong , Try Again');
+
+ </script>
+ {% endifequal %}
+ {% endblock body %}

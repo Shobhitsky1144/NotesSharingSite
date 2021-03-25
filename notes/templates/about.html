@@ -1,0 +1,19 @@
+{% extends 'nav.html' %}
+ {% load static %}
+ {% block body %}
+
+
+<div style="background-color:green;width:100%;height:100px;">
+  <h3 class="text-white container pt-3">About Us</h3>
+</div>
+<div class="container">
+  <img src="{% static 'images/about-Us.jpg' %}" style="width:100%">
+  <h4>ABOUT US</h4>
+  <hr>
+<p>Hello Friends ...<br>
+This is a Simple Study Notes Sharing Site Developed by Shobhit and Shubham
+using Python Django,  HTML , CSS , BOOTSTRAP AND SQLITE
+</p>
+</div>
+<br><br>
+ {% endblock body %}
