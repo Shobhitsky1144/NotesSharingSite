@@ -27,17 +27,41 @@
 <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+<style media="screen">
+.nav-link:hover{
+  color:white;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+}
+li{
+    color:blue;
+    margin-left:20px;
+}
+button{
+  color:blue;
+  padding-bottom: 10px;
+}
+
+</style>
+
 
 <!--database cdn end -->
 </head>
-<h4 style="padding:3%"><span style="color:red">Study Notes</span><span style="color:green"> Sharing Site</span></h4>
-<nav class="navbar navbar-expand-sm justify-content-center" style="background-color:lightgrey">
-<ul class="navbar-nav">
+
+<nav class="navbar navbar-expand-sm justify-content-center fixed-top" style="background-color:black";>
+     <a class="navbar-brand font-weight-bold text-green " ><span style="font-family:'MonoType Corsiva';font-size:25px;color:red";>Study Notes Sharing</span></a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#n" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <i class="fas fa-bars"></i>
+
+  </button>
+<div class="collapse navbar-collapse " id="n">
+<ul class="navbar-nav ">
   <li class="navbar-item">
-   <a class="nav-link" href="{% url 'admin_home' %}">HOME</a>
+   <a class="nav-link"  style="color:red" href="{% url 'admin_home' %}">HOME</a>
   </li>
   <li class="navbar-item dropdown">
-   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">VIEW NOTES</a>
+   <a class="nav-link dropdown-toggle"  style="color:red" href="#" data-toggle="dropdown">VIEW NOTES</a>
    <div class="dropdown-menu">
      <a class="dropdown-item" href="{% url 'pending_notes' %}">PENDING</a>
      <a class="dropdown-item" href="{% url 'accepted_notes' %}">ACCEPTED</a>
@@ -46,14 +70,15 @@
    </div>
   </li>
   <li class="navbar-item">
-   <a class="nav-link" href="{% url 'view_users' %}">VIEW USERS</a>
+   <a class="nav-link"  style="color:red"href="{% url 'view_users' %}">VIEW USERS</a>
   </li>
   <li class="navbar-item">
-   <a class="nav-link" href="{% url 'logout' %}">LOGOUT</a>
+   <a class="nav-link" style="color:red" href="{% url 'logout' %}">LOGOUT</a>
   </li>
 
 
 </ul>
+</div>
 </nav>
 {% block body %}
 

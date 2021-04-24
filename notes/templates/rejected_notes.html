@@ -8,17 +8,30 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+<style media="screen">
 
+     body{
+       background:linear-gradient(-30deg,#03a954 0%,#3a78b7 50%,#262626 50%,#607d8b 100%);
+     }
+        h2{
+  width:660px;
+  margin-left:350px;
+  margin-top:100px;
+   color:yellow;
+  background-color:black;
+
+}
+   </style>
 <script>
  $(document).ready(function() {
     $('#example').DataTable();
 } );
 </script>
- <div class="container mt-5">
+ <div class="container mt-5 ml-2">
    <h2 class="text-center">VIEW REJECTED NOTES</h2>
    <hr>
    <table class="table table-bordered" id="example">
-     <thead>
+     <thead style="color:white">
        <tr>
          <th>Sr.No.</th>
          <th>Uploading Date</th>

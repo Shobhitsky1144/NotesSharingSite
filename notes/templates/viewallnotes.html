@@ -8,18 +8,42 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+<style media="screen">
+  div{
+    <!-- background-color:lightgrey; -->
 
+
+  }
+  body{
+    background:linear-gradient(-30deg,#03a954 0%,#3a78b7 50%,#262626 50%,#607d8b 100%);
+  }
+ h2{
+  width:660px;
+  margin-left:350px;
+  margin-top:100px;
+
+}
+    section{
+
+      display:flex;
+      justify-content:center;
+      align-item:center;
+    }
+
+
+</style>
 <script>
  $(document).ready(function() {
     $('#example').DataTable();
 } );
 </script>
- <div class="container mt-5">
-   <h2 class="text-center">VIEW ALL NOTES</h2>
-   <hr>
-   <table class="table table-bordered" id="example">
-     <thead>
-       <tr>
+<h2 class="text-center"style="color:yellow;background-color:black">VIEW ALL NOTES</h2>
+<section>
+ <div class="container-fluid mt-1 text-center"  >
+   <br>
+   <table class="table table-bordered" id="example" >
+     <thead style="color:white";>
+       <tr >
          <th>Sr.No.</th>
          <th>Uploading Date</th>
          <th>Uploading BY</th>
@@ -37,9 +61,9 @@
        <tbody>
 
 
-       <tr>
-         <td>{{forloop.counter}}</td>
-         <td>{{i.user.username}}</td>
+       <tr >
+         <td >{{forloop.counter}}</td>
+         <td >{{i.user.username}}</td>
          <td>{{i.uploadingdate}}</td>
          <td>{{i.branch}}</td>
          <td>{{i.subject}}</td>
@@ -55,4 +79,5 @@
      </tbody>
    </table>
  </div>
+ </section>
  {% endblock body %}

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -27,12 +30,51 @@
 <script src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  const options={
+    bottom: '64px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true
+  }
+  const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
+<style media="screen">
 
+.nav-link:hover{
+  color:red;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 10px;
+}
+button{
+  color:blue;
+  padding-bottom: 10px;
+}
+.nav-link{
+    color:red;
+}
+</style>
 <!--database cdn end -->
 </head>
-<h4 style="padding:3%"><span style="color:red">Study Notes</span><span style="color:green"> Sharing Site</span></h4>
-<nav class="navbar navbar-expand-sm justify-content-center" style="background-color:lightgrey">
-<ul class="navbar-nav">
+
+<nav class="navbar navbar-expand-sm justify-content-center fixed-top" style="background-color:black";>
+  <a class="navbar-brand font-weight-bold text-green " ><span style="font-family:'MonoType Corsiva';font-size:25px;color:pink";>Study Notes Sharing</span></a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#n" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <i class="fas fa-bars"></i>
+
+  </button>
+<div class="collapse navbar-collapse " id="n">
+    <ul class="navbar-nav mr-auto">
   <li class="navbar-item">
    <a class="nav-link" href="{% url 'profile' %}">HOME</a>
   </li>
@@ -57,6 +99,7 @@
       </div>
    </div>
 </ul>
+</div>
 </nav>
 {% block body %}
 

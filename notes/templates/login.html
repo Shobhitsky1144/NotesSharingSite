@@ -14,28 +14,153 @@
 
  </script>
  {% endifequal %}
+ <style media="screen">
+   *{
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+   }
+   section{
+     display:flex;
+     justify-content:center;
+     align-item:center;
+     min-height:100vh;
+     background:linear-gradient(-30deg,#03a954 0%,#3a78b7 50%,#262626 50%,#607d8b 100%);
+     animation:animate 10s linear infinite;
+
+     filter:hue-rotate(120deg);
+
+   }
+
+   .box{
+     position:relative;
+     padding:50px;
+     width:360px;
+     height:480px;
+     display:flex;
+     justify-content:center;
+     align-item:center;
+     background:rgba(255,255,255,0.1);
+     border-radius:6px;
+     box-shadow:0 5px 35px rgba(0,0,0,0.2);
+
+   }
+   .inputbx input{
+     width:100%;
+     border:1px solid rgba(255,255,255,0.2);
+     background:transparent;
+     padding:8px 10px;
+     border-radius:6px;
+     color:white;
+
+   }
+
+    #g{
+     font-size:31px;
+     margin-left:-35px;
+     margin-top:-35px;
+   }
+   #p{
+     font-size:29px;
+     margin-left:-35px;
+     margin-top:-35px;
+  }
+.inputbx input[type="submit"]{
+  background:orange;
+  color:black;
+  font-weight:bold;
+}
+p{
+  background:black;
+  color:white;
+  width:130px;
+  border:0.5px solid black;
+  border-radius:6px;
+  padding:2px 6px 2px 2px;
+  padding-right:1px;
+}
+a{
+  color:orange;
+}
+ </style>
+
+  <section>
+    <div class="box " style="margin-top:90px";>
+      <div class="form">
+        <h2>User Login</h2><br>
+        <form class=""  method="post">
+          {% csrf_token %}
+          <div class="inputbx">
+            <input type="email" name="emailid" placeholder="Username" value="">
+            <i class="fa fa-user" id="g"></i>
+
+          </div><br>
+          <div class="inputbx">
+            <input type="text" name="pwd" placeholder="Password" value="">
+            <i class="fas fa-lock" id="p"></i>
+
+          </div><br>
+          <div class="inputbx">
+            <input type="submit" name=""  value="Login">
+
+          </div><br>
+        </form>
+        <p>Need an <a href="{% url 'signup' %}">Account</a></p>
+      </div>
+    </div>
+  </section>
 
 
- <div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-6">
-      <h2 class="text-center">NEW CUSTOMERS</h2>
-      <hr>
-      <p>By Creating an Account with our website , u will be able to move through the notes upload and
-      downloading process and more ...</p>
-      <center><a href="{% url 'signup' %}" class="btn btn-danger text-white mt-5">CREATE AN ACCOUNT</a></center>
-    </div>
-    <div class="col-sm-6">
-      <h2 class="text-center">USER LOGIN</h2>
-      <hr>
-      <form method="post">{% csrf_token %}
-      <label>Email Address</label>
-          <input type="email" class="form-control" name="emailid" placeholder="Enter Email ID">
-      <label>Password</label>
-          <input type="password" class="form-control" name="pwd" placeholder="Enter Password">
-          <button type="submit" class="btn btn-danger mt-2" name="button">Login</button>
-      </form>
-    </div>
-  </div>
- </div>
  {% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <style>
+   .container-fluid{
+     height:100%;
+   }
+ </style>
+
+   <!-- <div class="container-fluid" style="margin-top:90px;background-image:url('/static/images/login.jpg.jpg');width="100%";> -->
+
+    <!-- <div class="row"> -->
+     <!-- <div class="col-sm-6">
+       <h2 class="text-center">NEW CUSTOMERS</h2>
+       <hr>
+       <p>By Creating an Account with our website , u will be able to move through the notes upload and
+       downloading process and more ...</p>
+       <center><a href="{% url 'signup' %}" class="btn btn-danger text-white mt-5">CREATE AN ACCOUNT</a></center>
+     </div> -->
+     <!-- <div class="col-sm-6" style="background-image:url('/static/images/login.jpg.jpg')">
+      <!-- <img src="/static/images/login.jpg.jpg" alt="pp" width="100%"height="600"> -->
+
+
+     <!-- <div class="col-sm-12">
+       <h2 class="text-center">USER LOGIN</h2>
+       <hr>
+       <form method="post">{% csrf_token %}
+       <label><b>Email Address</b></label>
+           <input type="email" class="form-control" name="emailid" placeholder="Enter Email ID">
+       <label>Password</label>
+           <input type="password" class="form-control" name="pwd" placeholder="Enter Password">
+           <button type="submit" class="btn btn-danger mt-2" name="button">Login</button>
+       </form>
+     </div> -->
+    <!-- </div> -->
+ -->

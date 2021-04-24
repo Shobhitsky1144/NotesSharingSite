@@ -1,9 +1,25 @@
 {% extends 'usernav.html' %}
  {% load static %}
  {% block body %}
-<div class="container mt-5">
-  <h2 class="text-center">PROFILE</h2>
-  <hr>
+
+<style media="screen">
+  body{
+    background:linear-gradient(-30deg,#03a954 0%,#3a78b7 50%,#262626 50%,#607d8b 30%);
+  }
+ h2{
+  width:660px;
+  margin-left:350px;
+  margin-top:100px;
+   color:yellow;
+  background-color:black;
+
+}
+
+</style>
+<h2 class="text-center">PROFILE</h2>
+<div class="container mt-4 animate__animated animate__animate__animated animate__shakeY animate__slower animate__delay-2s "id="myy" style="color:black;width:800px";>
+
+  <br>
   <div class="row">
    <div class="col-sm-6">
        <b>Full Name :</b>
@@ -43,6 +59,6 @@
    </div>
 
   </div>
-  <a href="{% url 'edit_profile' %}" class="btn btn-primary mt-5">Edit Profile</a>
+  <a href="{% url 'edit_profile' %}" class="btn btn-warning mt-4 "id="pp">Edit Profile</a>
 </div>
  {% endblock %}

@@ -1,25 +1,62 @@
 {% extends 'nav.html' %}
  {% load static %}
  {% block body %}
- <style>
-   .image{
-     width:100%;
-     height:390px;
-     background:url({% static 'images/bawa.jpg' %});
+<style media="screen">
+  body{
+    overflow-x:hidden;
+    overflow-x:hidden;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+</style>
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init({
+        offset: 120,
+        duration: 1000
+     });
+   </script>
 
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  const options={
+    bottom: '64px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true
+  }
+  const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
 
-   }
- </style>
+ <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+   <div class="carousel-inner">
+     <div class="carousel-item active">
+       <img class="d-block w-100" src="static/images/pic2.jpg.jpg" width="100%"height="500"alt="First slide">
+     </div>
+     <div class="carousel-item">
+       <img class="d-block w-100" src="static/images/pic4.jpg.jpg" width="100%" height="500"alt="Second slide">
+     </div>
 
- <div class="image">
-<div class="transparentbox">
-    <p>Study Notes Sharing Site</p>
-</div>
+   </div>
  </div>
 
-<h4 class="text-center text-danger mt-5 mb-5">Just 4 steps to follow</h4>
+   <marquee style="color:blue;font-size:20px"> Welcome To our Study Notes Sharing Website . This Website is
+     made for college Students and Faculty .Full details and Sourcecode about the website is given at the link below. we will more update  in this soon </marquee>
 
-<div class="container mt-5">
+
+<div class="">
+  <h4 class="text-center text-danger mt-5 mb-5 ">Just 4 steps to follow</h4></div>
+
+<div class="container mt-5 ">
   <div class="row">
     <div class="col-sm-3">
       <div class="box1">
@@ -48,5 +85,153 @@
   </div>
 
 </div>
+
 <br><br>
+<br>
+<main class="p">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-12 " >
+        <div class="card" data-aos="flip-left">
+  <img class="card-img-top" src="static/cards/pic1.png" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">Html JavaScript</h4>
+    <p class="card-text">Html5 and JavaScriptused in the frontend of this Website. Click on this button for Source code.</p>
+    <!-- <a href="https://github.com/Shobhitsky1144/NotesSharing/tree/master/notes/templates" target="_blank" >Html Source Code ></a> -->
+    <button type="button" name="button"><a href="https://github.com/Shobhitsky1144/NotesSharing/blob/master/notes/models.py" target="_blank" >Html Sourcecode
+    </a>
+</button>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12">
+        <div class="card" data-aos="flip-right">
+  <img class="card-img-top" src="static/cards/card2.jpg.jpg" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">CSS Bootstrap </h4>
+    <p class="card-text">Css3 and bootstrap4 have been used for design in this Website. Click on this button for Source code.</p>
+  <!-- <a href="https://github.com/Shobhitsky1144/NotesSharing/tree/master/notes/static" >css and javascrip></a> -->
+  <button type="button" name="button"><a href="https://github.com/Shobhitsky1144/NotesSharing/blob/master/notes/models.py" target="_blank" >CSS Sourcecode
+  </a>
+</button>
+  </div>
+  </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12">
+        <div class="card" data-aos="flip-up">
+  <img class="card-img-top" src="static/cards/card3.jpg.jpg" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">Python Django</h4>
+    <p class="card-text">Python is used in this website for backend and for the  django framework.Click on this button for Source code.</p>
+    <!-- <a href="https://github.com/Shobhitsky1144/NotesSharing/blob/master/notes/views.py" >Python Sourcecode</a> -->
+    <button type="button" name="button"><a href="https://github.com/Shobhitsky1144/NotesSharing/blob/master/notes/models.py" target="_blank" >Python Sourcecode
+    </a>
+</button>
+  </div>
+  </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-12">
+        <div class="card" data-aos="flip-down">
+  <img class="card-img-top" src="static/cards/card5.jpg.jpg" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">Database</h4>
+    <p class="card-text">Databse has used SQLite in this  Website. <br>Click on this button for Source code.</p>
+    <!-- <a href="https://github.com/Shobhitsky1144/NotesSharing/blob/master/notes/models.py" >Database ></a> -->
+    <button type="button" name="button"><a href="https://github.com/Shobhitsky1144/NotesSharing/blob/master/notes/models.py"target="_blank"  >Database Sourcecode
+    </a>
+</button>
+
+  </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</main>
+<br>
+   <section class="sc"></section>
+  <div class="row">
+    <div class="whatsapp_float">
+      <a href="https://wa.me/917895305993" target="_blank"><img src='static/images/whatsapp.png' width="50px" class="whatsapp_float_btn"alt=""></a>
+    </div>
+
+   <div class="container">
+      <div class="row">
+
+          <div class="col-sm-12">
+              <h4 style="color:yellow;background-color:black;height:30px";>Use Technology in Website</h4><br>
+
+      <div class="progress "style="height: 20px";>
+
+  <div class="progress-bar bg-success " role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">HTML 35%</div>
+  </div>
+       <div class="progress"style="height: 20px";>
+  <div class="progress-bar bg-info " role="progressbar" style="width: 50%;height: 20px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">CSS 25%</div>
+</div>
+      <div class="progress"style="height: 20px";>
+  <div class="progress-bar bg-warning " role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">JAVASCRIPT 10%</div>
+</div>
+  <div class="progress-bar bg-danger " role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">PYTHON 30%</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<br>
+
+  <div class="container-fluid mt-3 " style="background-color:lightgrey;color:red";>
+      <div class="row">
+              <div class="col-sm-4" data-aos="zoom-in-left">
+  <br>
+        <h5>ABOUT US</h5>
+
+        <p>The website I have created use Html Css
+          Javascript </br>
+          bootstrap in rhe frontend the
+          backend has php python framework django
+          and database sqlite .
+
+
+        </p>
+      </div>
+
+      <div class="col-sm-4"data-aos="zoom-in-right">
+        <br>
+      <h5>ADDRESS</h5>
+      <span class="fas fa-map-marker-alt" ></span>
+      <span style="margin:29px 0">Udham singh nagar ,Uttarakhand</span><br><br>
+      <i class="fad fa-phone-volume"></i>
+      <span style="margin:15px 0">+917895305993</span><br><br>
+      <span class="fas fa-envelope"></span>
+      <span style="margin:15px 0">shobhitsky1144@gmail.com</span>
+
+      </div>
+
+
+        <div class="col-sm-4 pt-4"data-aos="fade-down-right">
+           <h5>Follow Us</h5>
+            <!-- <div class="col-lg-1 "> -->
+              <a href="https://www.facebook.com/shobhitsky1144" target="_blank"><i class="fab fa-facebook fa-2x"style="padding-right:11px";></i></a>
+            <!-- </div> -->
+            <!-- <div class="col-lg-1"> -->
+              <a href="https://twitter.com/ShobhitSky" target="_blank"><i class="fab fa-twitter fa-2x"style="padding-right:11px";></i></a>
+            <!-- </div> -->
+            <!-- <div class="col-lg-1"> -->
+              <a href="https://www.instagram.com/shobhit_skyy" target="_blank"><i class="fab fa-instagram fa-2x"style="padding-right:11px";></i></a>
+            <!-- </div>
+            <div class="col-lg-1"> -->
+              <a href="https://www.linkedin.com/in/shobhit-yadavv/" target="_blank"><i class="fab fa-linkedin fa-2x"style="padding-right:11px";></i></a>
+            <!-- </div>
+            <div class="col-lg-1"> -->
+              <a href="https://github.com/Shobhitsky1144" target="_blank"><i class="fab fa-github fa-2x"style="padding-right:11px";></i></a>
+              <p style="font-size:20pt;color:red;font-weight:bold">Copyright &copy; <script>
+                document.write(new Date().getFullYear())
+              </script> All Right Reserved
+
+      </div>
+    </div>
+  </div>
+</section>
  {% endblock body %}

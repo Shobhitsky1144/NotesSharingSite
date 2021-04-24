@@ -1,39 +1,42 @@
 {% extends 'nav.html' %}
  {% load static %}
  {% block body %}
- <div class="container mt-5">
+ <div style="background:linear-gradient(-30deg,#03a954 0%,#3a78b7 50%,#262626 50%,#607d8b 100%)";>
+
+
+ <div class="container " style="margin-top:-5px">
   <div class="row">
     <div class="col-sm-6">
-      <h2 class="text-center">EXISTING CUSTOMERS</h2>
+      <h2 class="text-center text-white pt-4">EXISTING CUSTOMERS</h2>
       <hr>
-      <p>By Creating an Account with our website , u will be able to move through the notes upload and
+      <p style="color:white">By Creating an Account with our website , u will be able to move through the notes upload and
       downloading process and more ...</p>
       <center><a href="{% url 'login' %}" class="btn btn-danger text-white mt-5"> USER LOGIN</a></center>
     </div>
     <div class="col-sm-6">
-      <h2 class="text-center">REGISTER US</h2>
+      <h2 class="text-center text-white pt-4">REGISTER US</h2>
       <hr>
-      <p>if you have not an account with us , please signup ....</p>
+
       <form method="post">{% csrf_token %}
-      <label>FirstName</label>
+      <label style="color:white">FirstName</label>
           <input type="text" class="form-control" name="firstname" placeholder="Enter FirstName">
-      <label>LastName</label>
+      <label style="color:white">LastName</label>
           <input type="text" class="form-control" name="lastname" placeholder="Enter LastName">
-      <label>Contact</label>
+      <label style="color:white">Contact</label>
           <input type="text" class="form-control" name="contact" placeholder="Enter Contact Number">
-      <label>Email Id</label>
+      <label style="color:whit"e>Email Id</label>
           <input type="email" class="form-control" name="emailid" placeholder="Enter Your Email ID">
-      <label>Password</label>
+      <label style="color:white">Password</label>
           <input type="password" class="form-control" name="password" placeholder="Enter Password">
-      <label>Branch</label>
+      <label style="color:white">Branch</label>
       <select class="form-control" name="branch">
-        <option value="Computer Science">Computer Science</option>>
+        <option value="Computer Science">Computer Science</option>
         <option value="Mechanical">Mechanical</option>
         <option value="Civil">Civil</option>
         <option value="Electrical">Electrical</option>
         <option value="Electronics">Electronics</option>
       </select>
-      <label>Are You?</label>
+      <label style="color:white">Are You?</label>
       <select class="form-control" name="role">
         <option value="Student">Student</option>>
         <option value="Teacher">Teacher</option>
@@ -44,6 +47,7 @@
     </div>
   </div>
  </div>
+  </div>
  {% ifequal error "no" %}
  <script>
    alert('Signup Sucssfully');
@@ -55,5 +59,8 @@
    alert('Something went wrong , Try Again');
 
  </script>
+ <style media="screen">
+
+ </style>
  {% endifequal %}
  {% endblock body %}
