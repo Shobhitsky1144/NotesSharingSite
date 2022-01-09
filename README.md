@@ -1,3 +1,3 @@
-# NotesSharingSite-Django-Project
+NotesSharingSite-Django-Project
 
 DEPLOY LINK- skytechical.pythonanywhere.com
